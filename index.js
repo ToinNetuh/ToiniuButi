@@ -1416,7 +1416,14 @@ async function starts() {
                 random = `${Math.floor(Math.random() * 100)}`
                hasil = `Pertanyaan : *${body.slice(1)}*\n\nJawaban : *${random}%*`
               reply(hasil)
-                break
+				break
+				case 'rate':
+					client.updatePresence(from, Presence.composing) 
+					/*if (!isDaftar) return reply(mess.only.daftarB)*/
+					  random = `${Math.floor(Math.random() * 999)}`
+					 hasil = `Nivel de: ${body.slice(1)}\ne : *${random}%*`
+					reply(hasil)
+					  break
 	    case 'kapankah':
                client.updatePresence(from, Presence.composing) 
                 /*if (!isDaftar) return reply(mess.only.daftarB)*/
